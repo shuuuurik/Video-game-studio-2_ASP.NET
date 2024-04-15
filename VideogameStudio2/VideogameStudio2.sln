@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33130.400
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VideogameStudio2", "VideogameStudio2\", "{F8436E14-C972-488B-AB47-95B04346B1D9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		ProjectReferences = "{b7aab112-90c9-486a-a1aa-4f4f7d594684}|VideogameStudio.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65132"
+		Debug.AspNetCompiler.PhysicalPath = "VideogameStudio2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65132\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65132"
+		Release.AspNetCompiler.PhysicalPath = "VideogameStudio2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65132\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "65132"
+		SlnRelativePath = "VideogameStudio2\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideogameStudioEntities", "VideogameStudioEntities\VideogameStudioEntities.csproj", "{B7AAB112-90C9-486A-A1AA-4F4F7D594684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8436E14-C972-488B-AB47-95B04346B1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8436E14-C972-488B-AB47-95B04346B1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8436E14-C972-488B-AB47-95B04346B1D9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8436E14-C972-488B-AB47-95B04346B1D9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B7AAB112-90C9-486A-A1AA-4F4F7D594684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AAB112-90C9-486A-A1AA-4F4F7D594684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AAB112-90C9-486A-A1AA-4F4F7D594684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AAB112-90C9-486A-A1AA-4F4F7D594684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D99B7840-0E6A-4133-A872-9B71EC85DACC}
+	EndGlobalSection
+EndGlobal

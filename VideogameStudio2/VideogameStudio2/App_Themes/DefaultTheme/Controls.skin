@@ -1,0 +1,6 @@
+﻿<asp:RequiredFieldValidator runat="server" CssClass="validation-error" />
+<asp:RangeValidator runat="server" CssClass="validation-error" />
+<asp:CompareValidator runat="server" CssClass="validation-error" />
+<asp:RegularExpressionValidator runat="server" CssClass="validation-error" />
+<asp:CustomValidator runat="server" CssClass="validation-error" />
+<asp:ValidationSummary runat="server" CssClass="validation-error" />

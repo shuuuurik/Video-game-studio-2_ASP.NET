@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="VideoGameStudioDB" Class="VideogameStudioDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\VideoGameStudioDB.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="VideoGameStudioDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EMPLOYEE" Member="EMPLOYEEs">
+    <Type Name="EMPLOYEE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WorkExperience" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WorkedMonths" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Productivity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Salary" Type="System.Decimal" DbType="Decimal(20,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Job_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HappinessLevel_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HAPPINESSLEVEL_EMPLOYEE" Member="HAPPINESSLEVEL" ThisKey="HappinessLevel_ID" OtherKey="ID" Type="HAPPINESSLEVEL" IsForeignKey="true" />
+      <Association Name="JOB_EMPLOYEE" Member="JOB" ThisKey="Job_ID" OtherKey="ID" Type="JOB" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HAPPINESSLEVEL" Member="HAPPINESSLEVELs">
+    <Type Name="HAPPINESSLEVEL">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="HAPPINESSLEVEL_EMPLOYEE" Member="EMPLOYEEs" ThisKey="ID" OtherKey="HappinessLevel_ID" Type="EMPLOYEE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JOB" Member="JOBs">
+    <Type Name="JOB">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="JOB_EMPLOYEE" Member="EMPLOYEEs" ThisKey="ID" OtherKey="Job_ID" Type="EMPLOYEE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DEVELOPMENT" Member="DEVELOPMENTs">
+    <Type Name="DEVELOPMENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DevelopmentComplexity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DevelopmentProgress" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestingProgress" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profit" Type="System.Decimal" DbType="Decimal(20,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Decimal" DbType="Decimal(20,2) NOT NULL" CanBeNull="false" />
+      <Column Name="GameStudio_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DEVELOPMENT_GAMESTUDIO" Member="GAMESTUDIOs" ThisKey="ID" OtherKey="CurrentDevelopment_ID" Type="GAMESTUDIO" />
+      <Association Name="GAMESTUDIO_DEVELOPMENT" Member="GAMESTUDIO" ThisKey="GameStudio_ID" OtherKey="ID" Type="GAMESTUDIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GAMESTUDIO" Member="GAMESTUDIOs">
+    <Type Name="GAMESTUDIO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Budget" Type="System.Decimal" DbType="Decimal(20,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentWorkForDevelopers" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentWorkForTesters" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentDevelopment_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GAMESTUDIO_DEVELOPMENT" Member="DEVELOPMENTs" ThisKey="ID" OtherKey="GameStudio_ID" Type="DEVELOPMENT" />
+      <Association Name="DEVELOPMENT_GAMESTUDIO" Member="DEVELOPMENT" ThisKey="CurrentDevelopment_ID" OtherKey="ID" Type="DEVELOPMENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

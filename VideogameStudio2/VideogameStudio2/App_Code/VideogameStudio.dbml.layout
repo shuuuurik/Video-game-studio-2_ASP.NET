@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="VideogameStudio">
+  <DataContextMoniker Name="/VideogameStudioDataContext" />
+  <nestedChildShapes>
+    <classShape Id="59b00ad3-aadb-442e-a003-03f27e743960" absoluteBounds="1.375, 0.625, 3.25, 2.7324039713541666">
+      <DataClassMoniker Name="/VideogameStudioDataContext/EMPLOYEE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c296c936-b291-4714-a980-5794260e75ac" absoluteBounds="1.39, 1.085, 3.2199999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8aa6f22c-0c52-415a-9764-43ceb987b276" absoluteBounds="0.625, 4.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/VideogameStudioDataContext/HAPPINESSLEVEL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c946db86-e108-4faa-96b5-4ff7bb70be36" absoluteBounds="0.64000000000000012, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2 : 4.75); (2 : 3.35740397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VideogameStudioDataContext/HAPPINESSLEVEL/HAPPINESSLEVEL_EMPLOYEE" />
+      <nodes>
+        <classShapeMoniker Id="8aa6f22c-0c52-415a-9764-43ceb987b276" />
+        <classShapeMoniker Id="59b00ad3-aadb-442e-a003-03f27e743960" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e0cb96ed-fe48-4ef8-b1c0-27f0d75fe6be" absoluteBounds="3, 4.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/VideogameStudioDataContext/JOB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1b92bf0-baba-4a6f-8535-caa0a8c7097c" absoluteBounds="3.0149999999999997, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.8125 : 4.75); (3.8125 : 3.35740397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VideogameStudioDataContext/JOB/JOB_EMPLOYEE" />
+      <nodes>
+        <classShapeMoniker Id="e0cb96ed-fe48-4ef8-b1c0-27f0d75fe6be" />
+        <classShapeMoniker Id="59b00ad3-aadb-442e-a003-03f27e743960" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0a5ce194-5544-4cd2-94e8-838345ece985" absoluteBounds="7.625, 0.875, 3.125, 2.3478011067708335">
+      <DataClassMoniker Name="/VideogameStudioDataContext/DEVELOPMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc0083ad-d344-4739-b14b-880b4010c340" absoluteBounds="7.64, 1.335, 3.0949999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26d60523-191e-4002-b979-47bbbde083bf" absoluteBounds="7.625, 4.75, 3, 1.9631982421875">
+      <DataClassMoniker Name="/VideogameStudioDataContext/GAMESTUDIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae38522f-2aba-4e13-8ca5-cd016d40f184" absoluteBounds="7.64, 5.21, 2.9699999999999998, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.34375 : 4.75); (8.34375 : 3.22280110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VideogameStudioDataContext/GAMESTUDIO/GAMESTUDIO_DEVELOPMENT" />
+      <nodes>
+        <classShapeMoniker Id="26d60523-191e-4002-b979-47bbbde083bf" />
+        <classShapeMoniker Id="0a5ce194-5544-4cd2-94e8-838345ece985" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.546875 : 3.22280110677083); (9.546875 : 4.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VideogameStudioDataContext/DEVELOPMENT/DEVELOPMENT_GAMESTUDIO" />
+      <nodes>
+        <classShapeMoniker Id="0a5ce194-5544-4cd2-94e8-838345ece985" />
+        <classShapeMoniker Id="26d60523-191e-4002-b979-47bbbde083bf" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
